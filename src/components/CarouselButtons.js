@@ -1,30 +1,24 @@
 // src/components/CarouselButtons.js
 import React from 'react';
-import { ScrollView, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons'; // Certifique-se de que o pacote expo/vector-icons está instalado
 
-// Importar imagens
-import icon1 from '../../assets/messenger.png';
-import icon2 from '../../assets/placeholder.png';
-import icon3 from '../../assets/tools.png';
-import icon4 from '../../assets/document.png';
-import icon5 from '../../assets/engineer.png';
-// import icon6 from '../assets/icon6.png';
-
-const CarouselButtons = () => {
+const CarouselButtons = ({navigation}) => {
   const buttons = [
-    { id: 1, image: icon1 },
-    { id: 2, image: icon2 },
-    { id: 3, image: icon3 },
-    { id: 4, image: icon4 },
-    { id: 5, image: icon5 },
-    // { id: 6, image: icon6 },
+    { id: 1, icon: 'comment-dots', screen: 'Chatbot' },
+    // { id: 2, icon: 'map-marker-alt', screen: 'Chatbot' },  
+    // { id: 3, icon: 'tools', screen: 'Chatbot' },
+    // { id: 4, icon: 'file-alt', screen: 'Chatbot' },
+    // { id: 5, icon: 'cogs' , screen: 'Chatbot'},
+    // Adicione mais ícones aqui se necessário
   ];
 
+  
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.carousel}>
       {buttons.map((button) => (
-        <TouchableOpacity key={button.id} style={styles.button}>
-          <Image source={button.image} style={styles.icon} />
+        <TouchableOpacity key={button.id} style={styles.button} >
+          <FontAwesome5 name={button.icon} size={30} color="#fff" />
         </TouchableOpacity>
       ))}
     </ScrollView>
@@ -37,17 +31,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   button: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
-    backgroundColor: '#FF0000',
+    width: 63,
+    height: 63,
+    borderRadius: 31,
+    backgroundColor: '#00009C',
+    borderColor: '#fff',
+    borderWidth: 2,
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 5,
-  },
-  icon: {
-    width: 40,
-    height: 40,
   },
 });
 

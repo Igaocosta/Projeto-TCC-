@@ -4,7 +4,7 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import VehicleCard from '../components/VehicleCard';
 
 const HomeScreen = ({ navigation }) => {
-  const userName = 'João da Silva';
+  const userName = 'Igor Costa';
   const vehicles = [
     { id: 1, name: 'Toyota Corolla', plate: 'ABC-1234', year: 2019, color: 'Preto' },
     { id: 2, name: 'Honda Civic', plate: 'DEF-5678', year: 2020, color: 'Branco' },
@@ -30,12 +30,12 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#f0f0f0',
     paddingTop: 50,
   },
   userName: {
     fontSize: 24,
-    color: '#FF0000',
+    color: '#00009C',
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 20,

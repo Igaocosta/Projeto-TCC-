@@ -17,24 +17,24 @@ const VehicleCard = ({ vehicle, onPress }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#fff',
     borderRadius: 10,
     padding: 15,
     marginVertical: 10,
     marginHorizontal: 20,
-    borderColor: '#FF0000',
+    borderColor: '#00009C',
     borderWidth: 1,
     alignItems: 'center',
   },
   icon: {
     width: 50,
     height: 50,
-    tintColor: '#FF0000',
+    tintColor: '#00009C',
     marginBottom: 10,
   },
   vehicleName: {
     fontSize: 18,
-    color: '#FF0000',
+    color: '#00009C',
     fontWeight: 'bold',
   },
   plate: {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
-    backgroundColor: '#FF0000',
+    backgroundColor: '#00009C',
     borderRadius: 5,
     paddingVertical: 8,
     paddingHorizontal: 20,

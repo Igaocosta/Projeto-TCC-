@@ -3,11 +3,13 @@ import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import CarouselButtons from './CarouselButtons';  // Importe o componente do carrossel
 
+
 const VehicleDetails = ({ route, navigation }) => {
   const { vehicle } = route.params;
 
   return (
     <View style={styles.container}>
+          
       <Text style={styles.title}>Detalhes do Veículo</Text>
 
       <Text style={styles.label}>Nome:</Text>
@@ -33,12 +35,12 @@ const VehicleDetails = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#f0f0f0',
     padding: 20,
   },
   title: {
     fontSize: 24,
-    color: '#FF0000',
+    color: '#00009C',
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
@@ -50,9 +52,20 @@ const styles = StyleSheet.create({
   },
   value: {
     fontSize: 16,
-    color: '#FF0000',
-    marginBottom: 20,
-  },
+    color: '#00009C',
+    backgroundColor: '#fff',
+    marginBottom: 5,
+    width: '100%',
+    height: 40,
+    borderColor: '#000',
+    borderWidth: 1,
+    paddingHorizontal: 8,
+    borderRadius: 10,
+    textAlign: 'center', // Alinha o texto horizontalmente no centro
+    textAlignVertical: 'center', // Alinha o texto verticalmente no centro (Android)
+    justifyContent: 'center', // Para centralizar conteúdo flex, mas não é necessário aqui
+  }
+  ,
 });
 
 export default VehicleDetails;
