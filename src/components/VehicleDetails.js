@@ -27,7 +27,7 @@ const VehicleDetails = ({ route, navigation }) => {
       {/* Adicione o carrossel de botões */}
       <CarouselButtons />
 
-      <Button title="Voltar" onPress={() => navigation.goBack()} />
+      {/* <Button title="Voltar" onPress={() => navigation.goBack()} /> */}
     </View>
   );
 };
