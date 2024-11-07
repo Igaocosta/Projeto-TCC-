@@ -8,12 +8,17 @@ export default function LoginScreen({ navigation }) {
   const handleLogin = () => {
     // Simulação de login
     if (email === 'admin@admin.com' && password === 'admin') {
-      Alert.alert('Login Successful');
+      Alert.alert('Sucesso');
       // Navegar para a tela principal (Dashboard)
       navigation.navigate('Home');
     } else {
-      Alert.alert('Invalid Credentials');
+      Alert.alert('Usuário e/ou senha inválidos');
     }
+  };
+
+  const handleRegister = () => {
+    // Navega para a tela de cadastro de usuário
+    navigation.navigate('Register');
   };
 
   return (
@@ -44,6 +49,11 @@ export default function LoginScreen({ navigation }) {
 
       <View style={styles.buttonContainer}>
         <Button title="Login" onPress={handleLogin} color="#00009C" />
+      </View>
+
+      {/* Botão Cadastrar Usuário estilizado como o de Login */}
+      <View style={styles.buttonContainer}>
+        <Button title="Cadastrar " onPress={handleRegister} color="#00009C" />
       </View>
     </View>
   );

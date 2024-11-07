@@ -12,7 +12,7 @@ const CarouselButtons = () => {
     { id: 2, icon: 'map-marker-alt', screen: 'Maps' },  
     { id: 3, icon: 'tools', screen: 'Checkup' },
     { id: 4, icon: 'file-alt', screen: 'Details' },
-    // { id: 5, icon: 'cogs' , screen: 'Chatbot'},
+    { id: 5, icon: 'cogs' , screen: 'Config'},
     // Adicione mais ícones aqui se necessário
   ];
 
